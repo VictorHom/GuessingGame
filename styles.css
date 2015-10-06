@@ -70,19 +70,6 @@ header {
     height: 30%;
 }
 
-/*
-#content {
-    padding: 0px 50px 0px 50px;
-    min-width: 100%;
-    min-height: 420px;
-    background-image: url(MarvinNoText.svg);
-    background-repeat: no-repeat;
-    background-position: bottom left;
-    margin-top: 5px;
-}
-*/
-
-
 button, submit {
   border:none;
 }
@@ -97,6 +84,7 @@ h1 {
     background-color: #D8D8D8;
     margin-left: 18%;
     min-width: 200px;
+    width: 50%;
     font-size: 1em;
     padding: 5% 5% 5% 5%;
     margin-right: 5%;
@@ -111,9 +99,7 @@ h1 {
         width: 0;
         height: 0;
         left: 38px;
-    /*	top: 50%;*/
-        top: 300px;
-    /*	border: 15px solid;*/
+        top: 320px;
         border: 40px solid;
         border-color: #D8D8D8 transparent transparent #D8D8D8;
         margin-left: 20%;
@@ -130,14 +116,14 @@ h1 {
     }
 }
 
-@media screen and (max-width: 481px){
+@media screen and (max-width: 479px){
     .textbox:after {
             content: ' ';
             position: absolute;
             width: 0;
             height: 0;
             left: 38px;
-            top: 42%;
+            top: 45%;
             border: 10px solid;
             border-color: #D8D8D8 transparent transparent #D8D8D8;
             margin-left: 20%;
@@ -151,7 +137,7 @@ h1 {
         background-position: bottom left;
         margin-top: 5px;
         /* minimize the image partly with smaller screen        */
-        background-size: 75% 75%;
+        background-size: 70% 70%;
     }
 }
 
