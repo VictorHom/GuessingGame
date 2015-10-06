@@ -1,0 +1,179 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+     pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd,
+     q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
+     dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot,
+     thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption,
+     footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark,
+     audio, video {
+         margin: 0;
+         padding: 0;
+         border: 0;
+         font-size: 100%;
+         vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu,
+     nav, section {
+         display: block;
+}
+body {
+         line-height: 1.2;
+}
+ol {
+         padding-left: 1.4em;
+         list-style: decimal;
+}
+
+ul {
+         padding-left: 1.4em
+         list-style: square;
+}
+
+table {
+         border-collapse: collapse;
+         border-spacing: 0;
+}
+
+
+* {
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+#container {
+    position: fixed;
+    min-height:100%;
+    min-width: 375px;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+footer {
+    background-color: #9B9B9B;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;
+}
+
+header {
+    background-color: #9B9B9B;
+    height: 30%;
+}
+
+/*
+#content {
+    padding: 0px 50px 0px 50px;
+    min-width: 100%;
+    min-height: 420px;
+    background-image: url(MarvinNoText.svg);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    margin-top: 5px;
+}
+*/
+
+
+button, submit {
+  border:none;
+}
+
+h1 {
+    text-align: center;
+    padding: 5% 5% 5% 5%;
+    font-size: 3.0em;
+}
+
+.textbox {
+    background-color: #D8D8D8;
+    margin-left: 18%;
+    min-width: 200px;
+    font-size: 1em;
+    padding: 5% 5% 5% 5%;
+    margin-right: 5%;
+    border-radius: 40px;
+    top: 280px;
+}
+
+@media screen and (min-width: 480px){
+    .textbox:after {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 38px;
+    /*	top: 50%;*/
+        top: 300px;
+    /*	border: 15px solid;*/
+        border: 40px solid;
+        border-color: #D8D8D8 transparent transparent #D8D8D8;
+        margin-left: 20%;
+    }
+    
+    #content {
+        padding: 0px 50px 0px 50px;
+        min-width: 100%;
+        min-height: 420px;
+        background-image: url(MarvinNoText.svg);
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width: 481px){
+    .textbox:after {
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 38px;
+            top: 42%;
+            border: 10px solid;
+            border-color: #D8D8D8 transparent transparent #D8D8D8;
+            margin-left: 20%;
+    }
+    #content {
+        padding: 0px 50px 0px 50px;
+        min-width: 100%;
+        min-height: 420px;
+        background-image: url(MarvinNoText.svg);
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        margin-top: 5px;
+        /* minimize the image partly with smaller screen        */
+        background-size: 75% 75%;
+    }
+}
+
+
+#number_form {
+    margin-left: 240px;
+    margin-top: 8%;
+    min-width: 100px;
+    width: 100px;
+    line-height: 1.5;
+}
+
+#number_form button{
+    font-size: 1em;
+    margin: 5px 5px 5px 0px;
+}
+
+#number_form submit{
+    font-size: 1em;
+    margin: 5px 5px 5px 0px;
+}
+
+#number {
+    width: 75px;
+}
