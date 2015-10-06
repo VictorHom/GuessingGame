@@ -86,20 +86,20 @@ h1 {
     min-width: 200px;
     width: 50%;
     font-size: 1em;
-    padding: 5% 5% 5% 5%;
+    padding: 6% 6% 6% 6%;
     margin-right: 5%;
     border-radius: 40px;
     top: 280px;
 }
 
-@media screen and (min-width: 480px){
+@media screen and (min-width: 1000px){
     .textbox:after {
         content: ' ';
         position: absolute;
         width: 0;
         height: 0;
         left: 38px;
-        top: 320px;
+        top: 340px;
         border: 40px solid;
         border-color: #D8D8D8 transparent transparent #D8D8D8;
         margin-left: 20%;
@@ -114,6 +114,45 @@ h1 {
         background-position: bottom left;
         margin-top: 5px;
     }
+    #number_form {
+        margin: 0% 50% 0% 0%;
+        min-width: 100px;
+        width: 100px;
+        line-height: 1.5;
+        float: right;
+    }    
+}
+
+@media screen and (min-width: 480px) and (max-width: 999px){
+    .textbox:after {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 38px;
+        top: 335px;
+        border: 25px solid;
+        border-color: #D8D8D8 transparent transparent #D8D8D8;
+        margin-left: 20%;
+    }
+    
+    #content {
+        padding: 0px 50px 0px 50px;
+        min-width: 100%;
+        min-height: 420px;
+        background-image: url(MarvinNoText.svg);
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        margin-top: 5px;
+        background-size: 60% 60%;
+    }
+    #number_form {
+        margin: 0% 30% 0% 0%;
+        min-width: 100px;
+        width: 100px;
+        line-height: 1.5;
+        float: right;
+    }    
 }
 
 @media screen and (max-width: 479px){
@@ -136,18 +175,15 @@ h1 {
         background-repeat: no-repeat;
         background-position: bottom left;
         margin-top: 5px;
-        /* minimize the image partly with smaller screen        */
         background-size: 70% 70%;
     }
-}
-
-
-#number_form {
-    margin-left: 240px;
-    margin-top: 8%;
-    min-width: 100px;
-    width: 100px;
-    line-height: 1.5;
+    #number_form {
+        margin: 0% 0% 0% 0%;
+        min-width: 100px;
+        width: 100px;
+        line-height: 1.5;
+        float: right;
+    }
 }
 
 #number_form button{
