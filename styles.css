@@ -44,10 +44,12 @@ table {
 
 #container {
     position: fixed;
-    min-height:100%;
     min-width: 375px;
+    min-height: 400px;
     height: 100%;
     width: 100%;
+    margin: 0 auto;
+
 }
 
 body {
@@ -58,144 +60,208 @@ body {
 }
 
 footer {
-    background-color: #9B9B9B;
-    position:absolute;
-    bottom:0;
+    background-color: #4A4C54;
+/*        #9B9B9B;*/
     width:100%;
-    height:60px;
+    height:15%;
+    min-height: 15%;
 }
 
 header {
-    background-color: #9B9B9B;
-    height: 30%;
+    background-color: #4A4C54;
+/*        #9B9B9B;*/
+    height: 15%;
+    min-height: 15%;
 }
 
 button, submit {
-  border:none;
+    border:none;
+    font-size: 2em;   
 }
 
 h1 {
     text-align: center;
-    padding: 5% 5% 5% 5%;
-    font-size: 3.0em;
+    padding: 2% 5% 5% 5%;
+    font-size: 2.7em;
+    color: #F9D510;
+/*        #fff;*/
 }
 
+
+
 .textbox {
-    background-color: #D8D8D8;
-    margin-left: 18%;
+    background-color: #9B9B9B;
+/*        #D8D8D8;*/
+/*    margin-left: 18%;*/
     min-width: 200px;
-    width: 50%;
-    font-size: 1em;
+    min-height: 100px;
+    width: 100%;
+    font-size: .5em;
     padding: 6% 6% 6% 6%;
     margin-right: 5%;
     border-radius: 40px;
     top: 280px;
+/*    top: 25%;*/
 }
 
-@media screen and (min-width: 1000px){
-    .textbox:after {
-        content: ' ';
-        position: absolute;
-        width: 0;
-        height: 0;
-        left: 38px;
-        top: 340px;
-        border: 40px solid;
-        border-color: #D8D8D8 transparent transparent #D8D8D8;
-        margin-left: 20%;
-    }
-    
-    #content {
-        padding: 0px 50px 0px 50px;
-        min-width: 100%;
-        min-height: 420px;
-        background-image: url(MarvinNoText.svg);
-        background-repeat: no-repeat;
-        background-position: bottom left;
-        margin-top: 5px;
-    }
-    #number_form {
-        margin: 0% 50% 0% 0%;
-        min-width: 100px;
-        width: 100px;
-        line-height: 1.5;
-        float: right;
-    }    
+input[type="number"] {
+    padding: 10px;
+    border: solid 5px #c9c9c9;
 }
 
-@media screen and (min-width: 480px) and (max-width: 999px){
-    .textbox:after {
-        content: ' ';
-        position: absolute;
-        width: 0;
-        height: 0;
-        left: 38px;
-        top: 335px;
-        border: 25px solid;
-        border-color: #D8D8D8 transparent transparent #D8D8D8;
-        margin-left: 20%;
-    }
-    
-    #content {
-        padding: 0px 50px 0px 50px;
-        min-width: 100%;
-        min-height: 420px;
-        background-image: url(MarvinNoText.svg);
-        background-repeat: no-repeat;
-        background-position: bottom left;
-        margin-top: 5px;
-        background-size: 60% 60%;
-    }
-    #number_form {
-        margin: 0% 30% 0% 0%;
-        min-width: 100px;
-        width: 100px;
-        line-height: 1.5;
-        float: right;
-    }    
+input[type="number"]:focus,
+input[type="number"].focus {
+  border: solid 5px #969696;
 }
 
-@media screen and (max-width: 479px){
-    .textbox:after {
-            content: ' ';
-            position: absolute;
-            width: 0;
-            height: 0;
-            left: 38px;
-            top: 45%;
-            border: 10px solid;
-            border-color: #D8D8D8 transparent transparent #D8D8D8;
-            margin-left: 20%;
-    }
-    #content {
-        padding: 0px 50px 0px 50px;
-        min-width: 100%;
-        min-height: 420px;
-        background-image: url(MarvinNoText.svg);
-        background-repeat: no-repeat;
-        background-position: bottom left;
-        margin-top: 5px;
-        background-size: 70% 70%;
-    }
-    #number_form {
-        margin: 0% 0% 0% 0%;
-        min-width: 100px;
-        width: 100px;
-        line-height: 1.5;
-        float: right;
-    }
+button {
+    color: #F9D510; 
+/*        #fff;*/
+    background-color: #9B9B9B;
+/*    text-shadow: -1px 1px #bfc1bc;*/
+    border: none;
+    display: block;
+    margin : 0 auto;
+}
+
+button:hover,
+button.hover {
+  background-color: #767873;
+/*  text-shadow: -1px 1px #bfc1bc;*/
+}
+
+button:active,
+button.active {
+  background-color: #767873;
+/*  text-shadow: -1px 1px #bfc1bc;*/
 }
 
 #number_form button{
     font-size: 1em;
     margin: 5px 5px 5px 0px;
+    margin: 20px auto;
 }
 
 #number_form submit{
     font-size: 1em;
     margin: 5px 5px 5px 0px;
+    
+}
+.textbox {
+    color: #F9D510;
+/*        #fff;*/
+    
 }
 
-#number {
-    width: 75px;
+@media screen and (max-width: 999px){
+    #content {
+        padding: 0px 50px 0px 50px;
+        min-width: 100%;
+        min-height: 70%;
+        background-image: url(MarvinNoText.svg);
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        margin-top: 5px;
+        background-size: 25% 25%;
+        font-size: 3em;
+    }
+    
+    #number_form {        
+        min-width: 200px;
+        line-height: 1.5;
+        padding-left: 0px;
+    }
+    
+    #container {
+        overflow: scroll;
+    }
 }
+@media screen and (min-width: 1000px){
+    #content {
+        padding: 0px 50px 0px 50px;
+        min-width: 100%;
+        min-height: 70%;
+        background-image: url(MarvinNoText.svg);
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        margin-top: 5px;
+        background-size: 60% 60%;
+        font-size: 2em;
+    }
+    
+    .textbox:after {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 450px;
+/*        top: 45%;*/
+        border: 40px solid;
+        border-color: #9B9B9B transparent transparent #9B9B9B;
+/*        margin-right: 15%;*/
+        top: 240px;
+    }
+    
+    #number_form {
+        min-width: 200px;
+        line-height: 1.5;
+        padding-left: 150px;
+    }
+}
+    
+
+    
+input[type="number"] {
+    display: block;
+    margin: 0 auto;
+}
+
+    
+#number {
+    font-size:25px;
+}
+    
+h2{
+    font-size: 1.5em;
+    text-align: center;
+    color: #F9D510;
+/*        #fff;*/
+}
+
+input[type='text']:focus,
+input[type='number']:focus,
+textarea:focus {
+	font-size: 16px;
+}
+
+/* disable auto-zoom on iphone input field focus */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+	select:focus,
+	textarea:focus,
+	input:focus {
+		font-size: 16px;
+	}
+}
+
+#container {
+    background-image: url(marquee-stars.svg);
+    background-color: #07306B;
+/*        #A0CBD3; */
+/*        #4A4C54;*/
+/*        #074e68;*/
+/*        #9B9B9B; nope*/
+/*        #414A4C; the arms look weird*/
+/*        #074e68;*/
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    
+}
+
+
