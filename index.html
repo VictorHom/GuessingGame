@@ -14,11 +14,9 @@
 <!--    need an area for number of chances left, what about past input box, what about countdown-->
 
     <div id="content">
-    <div class="textbox">
-        Guess the number. There is 1/100 chance that it is 42, but you probably don't care.
+    <div class="textbox" id="myTypingText">
     </div>
     <form action="index.html" method="post" id="number_form">
-<!--       <h2>Number? 5X</h2>-->
        <h2>5X</h2>
         <input type="number" id="number" name="player_number" min="1" max="100">
         <button type="submit" form="number_form" value="submit">Submit Guess</button>
@@ -37,4 +35,5 @@
     </footer>
     </div>
 </body>
+<script src="talking.js"></script>
 </html>
