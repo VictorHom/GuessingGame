@@ -65,6 +65,32 @@ footer {
     width:100%;
     height:15%;
     min-height: 15%;
+/*    text-align: center;*/
+    color: #F9D510;
+/*    font-size: 1.3em;*/
+}
+
+
+footer a:link {
+    color: #F9D510;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #F9D510;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: #F9D510;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: #F9D510;
+    text-decoration: none;
 }
 
 header {
@@ -153,6 +179,13 @@ button.active {
     
 }
 
+/*
+#footer a{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+*/
+
 @media screen and (max-width: 999px){
     #content {
         padding: 0px 50px 0px 50px;
@@ -174,6 +207,21 @@ button.active {
     
     #container {
         overflow: scroll;
+    }
+    
+    footer {
+        font-size: 1.1em;
+    }
+    footer a {
+/*
+        min-width: 400px;
+        margin: 0 auto;  
+*/
+/*        padding: 0% 25% 0% 25%;*/
+    }
+    
+    footer a:first-child {
+/*        margin-left: 10%;*/
     }
 }
 @media screen and (min-width: 1000px){
@@ -207,6 +255,11 @@ button.active {
         line-height: 1.5;
         padding-left: 150px;
     }
+    
+    footer {
+        text-align: center;
+        font-size: 1.3em;
+    }
 }
     
 
@@ -225,7 +278,6 @@ h2{
     font-size: 1.5em;
     text-align: center;
     color: #F9D510;
-/*        #fff;*/
 }
 
 input[type='text']:focus,
@@ -247,12 +299,6 @@ textarea:focus {
 #container {
     background-image: url(marquee-stars.svg);
     background-color: #07306B;
-/*        #A0CBD3; */
-/*        #4A4C54;*/
-/*        #074e68;*/
-/*        #9B9B9B; nope*/
-/*        #414A4C; the arms look weird*/
-/*        #074e68;*/
     background-position-x: initial;
     background-position-y: initial;
     background-size: initial;
@@ -262,6 +308,12 @@ textarea:focus {
     background-origin: initial;
     background-clip: initial;
     
+}
+
+#sociallinks {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.6em;
 }
 
 
