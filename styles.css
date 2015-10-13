@@ -1,3 +1,7 @@
+/**********************************
+RESETTING CSS
+***********************************/
+
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
      pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd,
      q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
@@ -35,6 +39,10 @@ table {
 }
 
 
+/**********************************
+BODY
+***********************************/
+
 * {
     -moz-box-sizing: border-box; 
     -webkit-box-sizing: border-box; 
@@ -52,6 +60,20 @@ table {
 
 }
 
+#container {
+    background-image: url(marquee-stars.svg);
+    background-color: #07306B;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    
+}
+
 body {
     margin-top: 0px;
     margin-right: 0px;
@@ -59,17 +81,116 @@ body {
     margin-left: 0px;
 }
 
+/**********************************
+CONTROLS
+***********************************/
+
+button, submit {
+    border:none;
+    font-size: 2em;   
+}
+
+.textbox {
+    background-color: #9B9B9B;
+    min-width: 200px;
+    min-height: 100px;
+    width: 100%;
+    font-size: .5em;
+    padding: 6% 6% 6% 6%;
+    margin-right: 5%;
+    border-radius: 40px;
+    top: 280px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: solid 5px #c9c9c9;
+}
+
+input[type="number"]:focus,
+input[type="number"].focus {
+  border: solid 5px #969696;
+}
+
+button {
+    color: #F9D510; 
+    background-color: #9B9B9B;
+    border: none;
+    display: block;
+    margin : 0 auto;
+}
+
+button:hover,
+button.hover {
+  background-color: #767873;
+}
+
+button:active,
+button.active {
+  background-color: #767873;
+}
+/**********************************
+FORM
+***********************************/
+h2 {
+    font-size: 1.5em;
+    text-align: center;
+    color: #F9D510;
+}
+
+#number_form button {
+    font-size: 1em;
+    margin: 5px 5px 5px 0px;
+    margin: 20px auto;
+}
+
+#number_form submit {
+    font-size: 1em;
+    margin: 5px 5px 5px 0px;
+    
+}
+.textbox {
+    color: #F9D510;
+}
+
+input[type="number"] {
+    display: block;
+    margin: 0 auto;
+}
+
+#number {
+    font-size:25px;
+}
+
+/**********************************
+HEADER
+***********************************/
+header {
+    background-color: #4A4C54;
+    height: 15%;
+    min-height: 15%;
+}
+
+h1 {
+    text-align: center;
+    padding: 2% 5% 5% 5%;
+    font-size: 2.7em;
+    color: #F9D510;
+}
+
+/**********************************
+FOOTER
+***********************************/
 footer {
     background-color: #4A4C54;
-/*        #9B9B9B;*/
     width:100%;
     height:15%;
     min-height: 15%;
-/*    text-align: center;*/
     color: #F9D510;
-/*    font-size: 1.3em;*/
 }
-
 
 footer a:link {
     color: #F9D510;
@@ -93,99 +214,16 @@ a:active {
     text-decoration: none;
 }
 
-header {
-    background-color: #4A4C54;
-/*        #9B9B9B;*/
-    height: 15%;
-    min-height: 15%;
-}
-
-button, submit {
-    border:none;
-    font-size: 2em;   
-}
-
-h1 {
-    text-align: center;
-    padding: 2% 5% 5% 5%;
-    font-size: 2.7em;
-    color: #F9D510;
-/*        #fff;*/
+#sociallinks {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.6em;
 }
 
 
-
-.textbox {
-    background-color: #9B9B9B;
-/*        #D8D8D8;*/
-/*    margin-left: 18%;*/
-    min-width: 200px;
-    min-height: 100px;
-    width: 100%;
-    font-size: .5em;
-    padding: 6% 6% 6% 6%;
-    margin-right: 5%;
-    border-radius: 40px;
-    top: 280px;
-/*    top: 25%;*/
-}
-
-input[type="number"] {
-    padding: 10px;
-    border: solid 5px #c9c9c9;
-}
-
-input[type="number"]:focus,
-input[type="number"].focus {
-  border: solid 5px #969696;
-}
-
-button {
-    color: #F9D510; 
-/*        #fff;*/
-    background-color: #9B9B9B;
-/*    text-shadow: -1px 1px #bfc1bc;*/
-    border: none;
-    display: block;
-    margin : 0 auto;
-}
-
-button:hover,
-button.hover {
-  background-color: #767873;
-/*  text-shadow: -1px 1px #bfc1bc;*/
-}
-
-button:active,
-button.active {
-  background-color: #767873;
-/*  text-shadow: -1px 1px #bfc1bc;*/
-}
-
-#number_form button{
-    font-size: 1em;
-    margin: 5px 5px 5px 0px;
-    margin: 20px auto;
-}
-
-#number_form submit{
-    font-size: 1em;
-    margin: 5px 5px 5px 0px;
-    
-}
-.textbox {
-    color: #F9D510;
-/*        #fff;*/
-    
-}
-
-/*
-#footer a{
-    padding-left: 10px;
-    padding-right: 10px;
-}
-*/
-
+/**********************************
+RESPONSIVE - tried to get something for iphone 6 and chrome browser
+***********************************/
 @media screen and (max-width: 999px){
     #content {
         padding: 0px 50px 0px 50px;
@@ -212,18 +250,8 @@ button.active {
     footer {
         font-size: 1.1em;
     }
-    footer a {
-/*
-        min-width: 400px;
-        margin: 0 auto;  
-*/
-/*        padding: 0% 25% 0% 25%;*/
-    }
-    
-    footer a:first-child {
-/*        margin-left: 10%;*/
-    }
 }
+
 @media screen and (min-width: 1000px){
     #content {
         padding: 0px 50px 0px 50px;
@@ -243,10 +271,8 @@ button.active {
         width: 0;
         height: 0;
         left: 450px;
-/*        top: 45%;*/
         border: 40px solid;
         border-color: #9B9B9B transparent transparent #9B9B9B;
-/*        margin-right: 15%;*/
         top: 240px;
     }
     
@@ -261,25 +287,10 @@ button.active {
         font-size: 1.3em;
     }
 }
-    
 
-    
-input[type="number"] {
-    display: block;
-    margin: 0 auto;
-}
-
-    
-#number {
-    font-size:25px;
-}
-    
-h2{
-    font-size: 1.5em;
-    text-align: center;
-    color: #F9D510;
-}
-
+/**********************************
+TO RID THE AUTOFOCUS - doesn't seem to work
+***********************************/
 input[type='text']:focus,
 input[type='number']:focus,
 textarea:focus {
@@ -296,25 +307,9 @@ textarea:focus {
 	}
 }
 
-#container {
-    background-image: url(marquee-stars.svg);
-    background-color: #07306B;
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-repeat-x: initial;
-    background-repeat-y: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    
-}
 
-#sociallinks {
-    width: 80%;
-    margin: 0 auto;
-    font-size: 1.6em;
-}
+
+
 
 
 
