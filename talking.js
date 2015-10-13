@@ -1,5 +1,5 @@
 
-var myString = "Guess the number. There is 1/100 chance that it is 42, but you probably don't care.";
+var myString = "There is 1/100 chance that it is 42, but what's the point.";
 var myArray = myString.split("");
 var loopTimer;
 var frameLooper = function() {

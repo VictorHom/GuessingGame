@@ -176,7 +176,7 @@ header {
 
 h1 {
     text-align: center;
-    padding: 2% 5% 5% 5%;
+    padding: 2% 5% 0% 5%;
     font-size: 2.7em;
     color: #F9D510;
 }
@@ -307,6 +307,30 @@ textarea:focus {
 	}
 }
 
+#previousguess {
+    height: 50px;
+}
+
+div .guessnode {
+    box-sizing: border-box;
+    width: 20%;
+    margin: 0;
+    display:inline;
+    float:left;
+    font-weight: bold;
+    text-align: center;
+    color: #F9D510;
+    border-right: solid;
+    border-left: solid;
+}
+
+div .cold {
+    background-color: #07306B;
+}
+
+div .hot {
+    background-color: #7f0000;
+}
 
 
 
