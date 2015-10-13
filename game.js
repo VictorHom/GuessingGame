@@ -46,7 +46,7 @@
 					}
 				} else {
 					// you put in a bad input, you should try again
-					document.getElementById("myTypingText").innerHTML = "as expected, you couldn't enter a good input.";
+					document.getElementById("myTypingText").innerHTML = "wrong. it's easier than finding the answer to the universe";
 				}
 			} else {
 				document.getElementById("myTypingText").innerHTML = "reset if that's all you want to use me for. The number was " + numr +".";	
