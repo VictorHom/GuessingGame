@@ -9,7 +9,7 @@
 		var hr = 100;
 		var adjustedhr = hr - lr + 1;
 		var numr = Math.floor(Math.random()*adjustedhr) + lr;
-		alert(numr);
+		console.log(numr);
 		// given a wrong response, do some quick check to tell if cold or hot.
 		//if 20 off in either direction of the generated number, it is bad
 		function respondWithCloseness(g) {
@@ -68,18 +68,22 @@
 		}
 
 		//event to handle the clicks
-		document.getElementById("number").onkeydown = function(){
+		document.getElementById("number_form").onsubmit = function() {
+			return false;
+		}
+
+		document.getElementById("number").onkeydown = function() {
 			if (event.keyCode === 13){
 				doesNumberToGuessExist();
 			}
 		}
-		document.getElementById("submitb").onclick = function(){
+		document.getElementById("submitb").onclick = function() {
 			doesNumberToGuessExist();
 		}
-		document.getElementsByClassName("reset")[0].onclick = function(){
+		document.getElementsByClassName("reset")[0].onclick = function() {
 			resetGame();
 		}
-		document.getElementsByClassName("hint")[0].onclick = function(){
+		document.getElementsByClassName("hint")[0].onclick = function() {
 			giveHint();
 		}
 }
