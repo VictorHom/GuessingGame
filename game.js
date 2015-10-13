@@ -8,14 +8,17 @@
 
 		function booleanWithCloseness(g){
 			var a;
-			var pop = guesses[guesses.length - 1];
-			if (pop === undefined){
+			var peek = guesses[guesses.length - 1];
+			// true is hot, false is cold
+			if (peek === undefined){
+				// when there are no guesses ,base closeness on whether you are within 20 of the generated number
 				if (Math.abs(numr - g) > 20) {
 					a = false;
 				} else {
 					a = true;
 				}
-			} else if (Math.abs(numr - g) < Math.abs(numr - pop)) {
+			// compare whether the closeness is closer than previously guessed number
+			} else if (Math.abs(numr - g) < Math.abs(numr - peek)) {
 				a = true;
 			} else {
 				a = false;
@@ -23,20 +26,22 @@
 			return a;			
 		}
 		// given a wrong response, do some quick check to tell if cold or hot.
-		//if 20 off in either direction of the generated number, it is bad
+		// if 20 off in either direction of the generated number, it is bad
+		// return string for the textbox
 		function respondWithCloseness(g) {
-				if (!booleanWithCloseness(g)) {
-					return "you're cold and I don't care.";
-				} else {
-					return "you're close and I am sad."
-				}
+			if (!booleanWithCloseness(g)) {
+				return "you're cold and I don't care.";
+			} else {
+				return "you're close and I am sad."
+			}
 		}
 		//helper function to update what text is in this element
 		function updateMessage(s, sty) {
 			document.getElementById("myTypingText").innerHTML = s;
 			document.getElementById("myTypingText").style.color = sty;
 		}
-
+		// check if the guess was used already
+		// return the guessed number if repeat guess, otherwise empty string
 		function repeatCheck(g) {
 			if (guesses.indexOf(g) > -1) {
 				//repeated
@@ -45,9 +50,9 @@
 				return "";
 			}
 		}
-
-		function updateRepeat(g) {
-			
+		// modifies the guesses array with new guess
+		// create a div to store in our list of guesses
+		function updateRepeat(g) {			
 			var guessnode = document.createElement("div"); 
 			if (booleanWithCloseness(g) === true){
 				guessnode.className = guessnode.className  + " hot";
@@ -55,7 +60,6 @@
 				guessnode.className = guessnode.className  + " cold";
 
 			}
-			//is it weird/bad practice since the booleanWithCloseness check has to happen before this push
 			guesses.push(g);
 			guessnode.innerHTML = g;
 			guessnode.className  = guessnode.className + " guessnode";
@@ -64,18 +68,18 @@
 
 		//issue if you submit before talking.js completes the text still continues to writes. unsure how to change
 		function doesNumberToGuessExist() {
+			var typingNode = document.getElementById("myTypingText");
 			if (gamestate) {
 			 	var guess  = parseInt(document.getElementById("number").value, 10);
 			 	//thought this would help the talking.js problem
-			 	document.getElementById("myTypingText").innerHTML = "";
+			 	typingNode.innerHTML = "";
 				if (guess >= 1 && guess <= 100 ){
 			 		if (guess === numr) {
-			 			gamestate == false;
-			 			updateMessage("big whoop that you guessed it!","#F9D510");
+			 			gamestate = false;
+			 			updateMessage("Big whoop that you guessed it!","#F9D510");
 			 			document.getElementsByClassName("reset")[0].style.color = "#7f0000";
 					}else{
 						var repeat = repeatCheck(guess);
-						console.log(repeat)
 						if (repeat === ""){
 							updateRepeat(guess);
 							updateMessage(respondWithCloseness(guess),"#7f0000");
@@ -88,15 +92,15 @@
 								document.getElementsByClassName("reset")[0].style.color = "#7f0000";
 							}
 						} else {
-							updateMessage("you have used " + repeat + " already." ,"#7f0000");
+							updateMessage("You have used " + repeat + " already." ,"#7f0000");
 						}
 					}
 				} else {
 					// you put in a bad input, you should try again
-					document.getElementById("myTypingText").innerHTML = "wrong. it's easier than finding the answer to the universe";
+					typingNode.innerHTML = "Wrong. it's easier than finding the answer to the universe";
 				}
 			} else {
-				document.getElementById("myTypingText").innerHTML = "reset if that's all you want to use me for. The number was " + numr +".";	
+				typingNode.innerHTML = "Reset if that's all you want to use me for. The number was " + numr +".";	
 			}
 			document.getElementById("number").value = "";
 		}
@@ -106,10 +110,11 @@
 		}
 
 		function giveHint() {
+			var typingNode = document.getElementById("myTypingText");
 			if (gamestate) {
-				document.getElementById("myTypingText").innerHTML = "Oh what's the point? the number times 2 is " + (2*numr) +".";
+				typingNode.innerHTML = "Oh what's the point? the number times 2 is " + (2*numr) +".";
 			} else {
-				document.getElementById("myTypingText").innerHTML = "just reset since your chances are up";
+				typingNode.innerHTML = "just reset since your chances are up";
 			}
 		}
 
@@ -132,5 +137,5 @@
 		document.getElementsByClassName("hint")[0].onclick = function() {
 			giveHint();
 		}
-}
+	}
 }());
