@@ -149,5 +149,6 @@
 		document.getElementsByClassName("hint")[0].onclick = function() {
 			giveHint();
 		}
+		
 	}
 }());

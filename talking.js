@@ -12,3 +12,4 @@ var frameLooper = function() {
 	loopTimer = setTimeout('frameLooper()',40);
 }
 frameLooper();
+
